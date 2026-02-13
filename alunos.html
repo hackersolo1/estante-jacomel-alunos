@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Jacomel - Catálogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="alunos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="subtitle">Estante Jacomel</div>
+            <h1>Catálogo<br>Digital</h1>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar livros, autores ou disponibilidade...">
+            </div>
+
+            <!-- <div class="filters">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Disponíveis</button>
+                <button class="filter-btn">Ficção</button>
+                <button class="filter-btn">Não-ficção</button>
+                <button class="filter-btn">Juvenil</button>
+            </div> -->
+        </div>
+    </header>
+
+    <main>
+        <button class="atualizarLista">Atualizar lista</button>
+        <div class="catalogo">
+            
+        </div>
+    </main>
+
+    <!-- Modal de Detalhes -->
+    <div class="modal" id="modalDetalhes">
+        <div class="modal-content">
+            <button class="close-modal">×</button>
+            
+            <div class="modal-header">
+                <div class="modal-capa" id="modalCapa"></div>
+                <div class="modal-info-principal">
+                    <h2 class="modal-titulo" id="modalTitulo">Título do Livro</h2>
+                    <div class="modal-autor" id="modalAutor">Autor</div>
+                    <span class="livro-status" id="modalStatus">Disponível</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Descrição</h3>
+                    <p id="modalDescricao">Descrição do livro aparecerá aqui...</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Sinopse</h3>
+                    <p id="modalSinopse">Sinopse completa do livro aparecerá aqui...</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Voltar</button>
+                <button class="btn btn-primary" id="btnReservar">Reservar Livro</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Reserva -->
+    <div class="modal" id="modalReserva">
+        <div class="modal-content">
+            <button class="close-modal2 close-modal">X</button>
+            
+            <div class="modal-body">
+                <h2 class="modal-titulo">Fazer Reserva</h2>
+                
+                <div class="reserva-form">
+                    <label for="nomeAluno">Seu Nome Completo</label>
+                    <input type="text" id="nomeAluno" placeholder="Digite seu nome completo">
+                    
+                    <label for="turma">Sua Turma</label>
+                    <input type="text" id="turma" placeholder="Ex: 9º A">
+                </div>
+
+                <div class="modal-section">
+                    <h3>Livro Selecionado</h3>
+                    <p id="livroReservado">...</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary2 btn-secondary">Cancelar</button>
+                <button class="btn btn-primary btn-confirmar">Confirmar Reserva</button>
+            </div>
+        </div>
+    </div>
+    <script src="alunos.js"></script>
+</body>
+</html>
