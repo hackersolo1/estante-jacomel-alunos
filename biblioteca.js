@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.modal-cover-add-cover').style.background = 'linear-gradient(135deg, #D4764A, #7A9B76)';
     async function getLivroDetalhes(livroID) {
         try {
-            const res = await fetch(`http://localhost:3001/livros/${livroID}`);
+            const res = await fetch(`https://estante-jacomel.vercel.app/livros/${livroID}`);
             const data = await res.json();
 
             document.querySelector('.modal-cover').style.backgroundImage = `url(${data.capa})`;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function carregarLivros() {
         try {
-            const res = await fetch('http://localhost:3001/livros');
+            const res = await fetch('https://estante-jacomel.vercel.app/livros');
             const data = await res.json();
 
             const addBook = document.createElement('div');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function carregarAlunos() {
         try {
-            const res = await fetch('http://localhost:3001/carregarAlunos');
+            const res = await fetch('https://estante-jacomel.vercel.app/carregarAlunos');
             const data = await res.json();
 
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function adicionarLivro(nomeLivro, autor, slugID, sinopse, descricao, capa) {
         try {
-            const res = await fetch('http://localhost:3001/adicionarLivro', {
+            const res = await fetch('https://estante-jacomel.vercel.app/adicionarLivro', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function emprestarLivro(slugID) {
         try {
-            const res = await fetch('http://localhost:3001/emprestarLivro', {
+            const res = await fetch('https://estante-jacomel.vercel.app/emprestarLivro', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function disponivelLivro(slugID) {
         try {
-            const res = await fetch('http://localhost:3001/disponivelLivro', {
+            const res = await fetch('https://estante-jacomel.vercel.app/disponivelLivro', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function removerAlunos(alunoNome) {
         try {
-            const req = await fetch('http://localhost:3001/teste', {
+            const req = await fetch('https://estante-jacomel.vercel.app/teste', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
